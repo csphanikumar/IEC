@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="">
+  <link rel="prefetch" href="">
+  <title>Untitled</title><link rel="stylesheet" href="./main.css">
+<meta name="title" content="Untitled">
+<meta name="description" content="undefined">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iec-iit-delhi.versoly.page">
+<meta property="og:title" content="Untitled">
+<meta name="twitter:title" content="Untitled">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://iec-iit-delhi.versoly.page">
+  <link rel="preconnect" href="https://d1pnnwteuly8z3.cloudfront.net"><link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><script>document.documentElement.classList.add('js')</script>
+  
+  <style>.d-js {display: none !important;}[data-toggle="modal"] {cursor: pointer;}</style>
+
+  <style>
+    /* CSS for spacing and left alignment */
+    #announcement {
+        text-align: center;  /* Center the content */
+        font-weight: bold;   /* Make the text bold */
+        line-height: 1.6;     /* Increase the line spacing */
+        margin: 0;
+        font-size: 1.5rem;    /* Set text size similar to h4 */
+    }
+    
+    #announcement p {
+        margin-bottom: 10px;  /* Space between each line */
+    }
+</style>
+</head>
+<body>
+  
+<script>
+window.vDelayed = {};window.vLoadedDelayed = {};
+</script>
+  <nav class="navbar filter navbar-dark static top-0 p-8 py-14 m--0 -mb-9 bg-[rgb(200,180,255)] bg-gradient-to-r from-[rgb(30,58,138)] via-[rgb(59,130,246)] to-[rgb(147,197,253)] rounded-none" id="navbar" attr="value">
+    <div class="container">
+        <a class="navbar-brand text-white" href="https://home.iitd.ac.in">
+            <img width="180" height="180" alt="company logo" 
+            src="images/e4cf24ae-8e5b-47b0-99fc-e818cbe417d7.png" 
+            class="w-[200px] h-[200px] -mt-5 rounded-none" />        </a>
+        <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Open navbar menu</span>
+            <span class="block h-1 rounded-full bg-white"></span>
+            <span class="block h-1 mt-1 rounded-full bg-white"></span>
+            <span class="block h-1 mt-1 rounded-full bg-white"></span>
+        </button>
+        <div class="navbar-row" id="navbar-row">
+            <ul class="navbar-col">
+                <li>
+                    <a href="" class="nav-link mx-20 ml-20 text-xl font-semibold text-black">ABOUT</a>
+                </li>
+                <li class="text-xl">
+                    <a href="members.html" class="nav-link font-semibold text-black">MEMBERS</a>
+                </li>
+            </ul>
+            <ul class="navbar-col">
+                <li>
+                    <a href="guidelines.html" class="nav-link -ml-36 text-xl font-semibold text-black">GUIDELINES</a>
+                </li>
+                <li>
+                    <a href="forms.html" class="nav-link ml-9 text-xl font-semibold text-black">FORMS</a>
+                </li>
+            </ul>
+            <ul class="navbar-col">
+                <li>
+                    <a href="workshop.html" class="nav-link -ml-40 text-xl font-semibold text-black">WORKSHOPS</a>
+                </li>
+                <li>
+                    <a href="faq.html" class="nav-link text-xl font-semibold text-black">FAQ's</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<body>
+    <section class="py-6 px-8 mx-16 my-10 mt-24 bg-[rgb(30,58,138)] rounded-3xl flex justify-center items-center text-center">
+        <div class="container flex flex-col justify-center items-center space-y-6">
+            <div class="row">
+                <div class="col relative">
+                    <div id="announcement" class="text-warning">
+                        <!-- The announcement content will go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fetch the announcement from the JSON file
+        fetch('announcement.json')
+            .then(response => response.json())
+            .then(data => {
+                // Get the element where the announcement will be displayed
+                const announcementElement = document.getElementById('announcement');
+                
+                // Clear any existing content
+                announcementElement.innerHTML = '';
+
+                // Loop through each line in the announcement and create a <p> for each
+                data.announcement.forEach(line => {
+                    const p = document.createElement('p');
+                    p.textContent = line;
+                    announcementElement.appendChild(p);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the announcement:', error);
+                document.getElementById('announcement').innerHTML = '<b>There was an error loading the announcement.</b>';
+            });
+    </script>
+<h4 class="m-16 text-center rounded-3xl" style="background-color: rgb(255, 188, 36);"><b>Overview</b></h4>
+
+
+<section class="py-24 m--0 my-6 mt-16 bg-[rgb(255,255,255)] from-primary-300 via-white to-secondary-200 rounded-none">
+    <div class="container -mt-24">
+        <div class="row">
+            <div class="col relative">
+                <h5 class="pr-40 text-justify">The IIT Delhi Institute Ethics Committee (IEC) reviews and approves research projects involving human subjects, but only if they are conducted by IIT Delhi faculty. The IEC exists to ensure that research follows ethical standards, as individual researchers may not always make the right decisions.
+                    <br />
+                    <br />Many past cases highlight the need for ethical oversight in medical and academic research.The IEC office will announce upcoming meetings one month in advance. IIT Delhi faculty must submit a signed hard copy of their application, along with the required documents, to the IEC office at Block IV, 3rd Floor, Room 4B9. Additionally, they must email a complete application form and documents as a single PDF to iitd_iec@iitd.ac.in.
+                    <br />
+                    <br />After submission, the application will go through a technical and ethical review. Any feedback will be sent to the faculty member or principal investigator.If needed, the researcher may have to appear before the committee to address concerns. Students or postdocs cannot submit or present the application on behalf of a faculty member.</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<h4 class="m-16 -mt-16 text-center bg-primary rounded-3xl"style="background-color: rgb(255, 188, 36);" > <b>Important Links</b></h4>
+<section class="py-24 -mt-11">
+    <div class="container -mt-16">
+        <div class="row gap-4 justify-start">
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" data-eventid="" href="https://www.icmr.gov.in/icmrobject/uploads/Guidelines/1724914217_handbook_on_icmr_ethical_guidelines_2018.pdf">National Ethical Guidelines for Biomedical and Health Research Involving Human subjects</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/National_Ethical_Guidelines_for_BioMedical_Research_Involving_Children_0.pdf">National Guidelines for Biomedical research involving children</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://www.icmr.gov.in/icmrobject/custom_data/pdf/resource-guidelines/Guidelines_for_stem_cell_research_2017.pdf">National Guidelines for Stem Cells Research</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://cdsco.gov.in/opencms/export/sites/CDSCO_WEB/Pdf-documents/NewDrugs_CTRules_2019.pdf">New Drugs and Clinical Trials Rules, 2019</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://www.icmr.gov.in/icmrobject/uploads/Guidelines/1724844182_icmr_pripe2019.pdf">ICMR Policy on Research integrity and publications</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://web.iitd.ac.in/~elangovan/ethics/doc/india-medical-devices-rules-2017.pdf">Medical Device Rules, 2017</a>
+            </div>
+            <div class="col relative">
+                <a class="btn btn-primary btn-outline w-full text-left text-black" href="https://onlinecourses.swayam2.ac.in/aic22_ge22/preview">ICMR-WHO NPTEL course on Ethics in Human Research</a>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="py-4 bg-dark bg-gradient-to-r from-[rgb(30,58,138)] via-[rgb(59,130,246)] to-[rgb(147,197,253)] relative" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
+                <div class="text-center text-white text-sm mb-6">
+                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Addresses</h5>
+                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Member Secretary office : Block II, Room - 402F</h5>
+                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Application submission  : Block IV, Room - 4B9</h5>
+                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Contact no : 01126591221</h5>
+
+                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Emails</h5>
+
+                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Member secretary: <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
+                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Application submission: <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="position: absolute; bottom: 2px; right: 5px; font-size: 6px; color: black;">© 2025 IIT Delhi. All rights reserved. | Made by Phani & Harshit</p>
+</footer>
+
+  
+  
+<script src="https://d1pnnwteuly8z3.cloudfront.net/libs/webfont/1.6.28/webfont.js"></script>
+<script>WebFont.load({google: {families: ['Inter:300,300i,400,500,600,700,800&display=swap']}})</script>
+
+<script>
+(function(){
+s=document.createElement("script");
+s.src="https://d1pnnwteuly8z3.cloudfront.net/libs/floating-ui/1.0.1/floating-ui.min.js";
+s.async = false;
+document.body.appendChild(s);
+})();
+</script>
+<script>
+
+(() => {
+var scriptUrl = 'https://d1pnnwteuly8z3.cloudfront.net/libs/versoly-ui/2.1.1/versoly-ui.js';
+window.vLoadedDelayed[scriptUrl] = false;
+
+window.vDelayed[scriptUrl] = () => {
+  if (vLoadedDelayed[scriptUrl]) {
+    return
+  }
+  vLoadedDelayed[scriptUrl] = true;
+  s=document.createElement("script");
+s.src="https://d1pnnwteuly8z3.cloudfront.net/libs/versoly-ui/2.1.1/versoly-ui.js";
+s.async = false;
+document.body.appendChild(s);
+};
+
+addEventListener('DOMContentLoaded', () => setTimeout(vDelayed[scriptUrl], 5000));
+addEventListener('scroll', () => setTimeout(vDelayed[scriptUrl], 300), {once: true});
+['click', 'mousemove'].forEach(e => addEventListener(e, vDelayed[scriptUrl], {once: true}));
+})();
+</script>
+<script>
+if (document.getElementById("navbar")) {
+  var style = document.createElement('style');
+  style.innerHTML = '* {scroll-margin-top: ' + document.getElementById("navbar").offsetHeight + 'px}';
+  document.head.appendChild(style);
+}
+</script>
+  
+  
+  
+</body>
+</html>
