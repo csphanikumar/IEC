@@ -218,24 +218,64 @@ window.vDelayed = {};window.vLoadedDelayed = {};
         <div class="row">
             <div class="col text-center">
                 <a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
+
                 <div class="text-center text-white text-sm mb-6">
                     <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Addresses</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Member Secretary Office : Block II, Room - 402F</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Application Submission  : Block IV, Room - 4B9</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Contact No : 011-26591221</h5>
+                    <button class="toggle-button" onclick="toggleContent('addresses')">View Addresses</button>
+                    <div id="addresses" class="toggle-content" style="display: none; color: black;">
+                        <p><strong>Member Secretary Office:</strong> Block II, Room - 402F</p>
+                        <p><strong>Application Submission:</strong> Block IV, Room - 4B9</p>
+                        <p><strong>Contact No:</strong> 011-26591221</p>
+                    </div>
 
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Emails</h5>
-
-                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Member Secretary: <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
-                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Application Submission: <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
-
-
+                    <h5 class="mb-4 text-xl text-black mt-5" style="font-weight: 600;">Emails</h5>
+                    <button class="toggle-button" onclick="toggleContent('emails')">View Emails</button>
+                    <div id="emails" class="toggle-content" style="display: none; color: black;">
+                        <p><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></p>
+                        <p><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <p style="position: absolute; bottom: 2px; right: 5px; font-size: 6px; color: black;">© 2025 IIT Delhi. All rights reserved. | Made by Phani & Harshit</p>
 </footer>
+
+<!-- Simple JavaScript to toggle content visibility -->
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+<!-- You can also style the toggle button if you want -->
+<style>
+    .toggle-button {
+        background-color: #1053f0; /* Green */
+        color: rgb(0, 0, 0);
+        padding: 10px 15px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .toggle-button:hover {
+        background-color: #1053f0;
+    }
+
+    .toggle-content {
+        margin-top: 10px;
+        padding: 10px;
+        
+        border-radius: 5px;
+    }
+</style>
 
 
   
