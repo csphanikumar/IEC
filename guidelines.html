@@ -18,6 +18,89 @@
   <link rel="preconnect" href="https://d1pnnwteuly8z3.cloudfront.net"><link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><script>document.documentElement.classList.add('js')</script>
   
   <style>.d-js {display: none !important;}[data-toggle="modal"] {cursor: pointer;}</style>
+  <style>
+    .d-js {display: none !important;}
+    [data-toggle="modal"] {cursor: pointer;}
+    
+    body {
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+    }
+    .tabs-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .tabs {
+        display: flex;
+        gap: 15px;
+        background: #1E3A8A;
+        padding: 12px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        
+    }
+    .tab {
+        padding: 12px 20px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.3s;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #83B4FE, #83B4FE);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        
+    }
+    .tab:hover, .tab.active {
+        background: linear-gradient(135deg, #ffffff, #ffffff);
+        transform: translateY(-2px);
+    }
+    .content {
+        display: none;
+        padding: 20px;
+        background: white;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+        width: 80%;
+        text-align: center;
+        overflow: hidden;  /* Prevent content from overflowing */
+        border: 2px solid black;  /* Add black border to the whole tabs container */
+
+    }
+    .active-content {
+        display: block;
+    }
+    .image-wrapper {
+        max-width: 100%;  /* Make sure the wrapper is not wider than its parent */
+        overflow: hidden; /* Prevent the image from overflowing */
+        text-align: center; /* Center the image horizontally */
+        margin-top: 20px; /* Optional: space from top */
+    }
+    
+    .image-wrapper img {
+        max-width: 100%;  /* Ensure the image doesn't overflow */
+        height: auto;  /* Maintain aspect ratio */
+    }
+
+
+   
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+
+
+  <script>
+    window.vDelayed = {};window.vLoadedDelayed = {};
+    </script>
 </head>
 <body>
   
@@ -64,7 +147,12 @@ window.vDelayed = {};window.vLoadedDelayed = {};
             </ul>
         </div>
     </div>
-</nav><section class="py-24 -m-16 -my-32 mt-8 -mb-3">
+</nav>
+
+
+
+
+<section class="py-24 -m-16 -my-32 mt-8 -mb-3">
     <div class="container -mt-16">
         <div class="row gap-4 justify-start">
             <div class="col relative">
@@ -72,27 +160,29 @@ window.vDelayed = {};window.vLoadedDelayed = {};
             </div>
         </div>
     </div>
-</section>
-<h4 class="m-16 -mt-11 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>IEC-IITDelhi Review Process</b></h4>
-<section class="py-24 -mt-32">
-    <div class="container">
-        <section class="py-24">
-            <div class="container">
-                <div class="row">
-                    <div class="col" attr="value">
-                        <img src="images\Flowchart_final_IEC.png" class="-mt-9" />
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
+
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab active" onclick="openTab(event, 'tab1')">IEC - IIT Delhi Review Process</button>
+        <button class="tab" onclick="openTab(event, 'tab2')">IEC Guidelines for Research Proposals</button>
+        <button class="tab" onclick="openTab(event, 'tab3')">Workflow of IEC - IIT Delhi Office</button>
+        <button class="tab" onclick="openTab(event, 'tab4')">Proposal Review Procedure</button>
     </div>
-</section>
-<h4 class="m-16 -mt-36 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"><b>IEC Guidelines for Research Proposals</b></h4>
-<section class="py-24 -mt-16">
-    <div class="container">
+    <div id="tab1" class="content active-content"><div class="container">
+        <div class="row">
+            <div class="image-wrapper">
+                <img src="images/flowchart-iec.png" class="-mt-9" />
+            </div>
+        </div>
+    </div></div>
+    <div id="tab2" class="content"><div class="container">
         <div class="row">
             <div class="col relative from-primary via-light to-secondary">
                 <h5 class="-mt-10 text-justify text-black">
+                    <br /> <br /><br />
+
                     <strong>Multiple Studies in One Proposal:</strong> Combining multiple studies under a single proposal is not permissible. Each study must have a distinct research question and design to receive ethical approval.
                     <br />
                     <strong>
@@ -112,91 +202,88 @@ window.vDelayed = {};window.vLoadedDelayed = {};
                 </h5>
             </div>
         </div>
-    </div>
-</section>
-<h4 class="m-16 -mt-12 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>Workflow of IEC-IIT Delhi Office</b></h4>
-<section class="py-24 -mt-16">
-    <div class="container">
-        <div class="row">
-            <div class="col relative from-primary via-light to-secondary">
-                <h5 class="-mt-10 text-justify text-black">
-                    
-                    To ensure an equitable review process and prevent overburdening the Institutional Ethics Committee (IEC), the following guidelines apply.
-                    <br /><br />
-                    
-                    <strong>1. Proposal Submission and Review Capacity</strong>
-                    <br />                    <br />
+    </div></div>
+    <div id="tab3" class="content"><div class="col relative from-primary via-light to-secondary">
+        <h5 class="-mt-10 text-justify text-black">
+            <br /> <br /><br />
+
+            
+            To ensure an equitable review process and prevent overburdening the Institutional Ethics Committee (IEC), the following guidelines apply.
+            <br /><br />
+            
+            <strong>1. Proposal Submission and Review Capacity</strong>
+            <br />                    
 
 
-                    <ul class="list-disc pl-10 leading-relaxed text-justify">
-                        <li class="px-10 text-justify">
-                            <span class="block">• The IEC will review a maximum of 6-7 research proposals per monthly meeting.</span>
-                        </li>
-                        <li class="px-10 text-justify">
-                            <span class="block">• Principal Investigators (PIs) are encouraged to strategically plan their submissions to avoid delays.</span>
-                        </li>
-                        <li class="px-10 text-justify">
-                            <span class="block">• When multiple submissions are received from a single PI, the IEC reserves the right to prioritize applications to ensure fair access for all researchers.</span>
-                        </li>
-                        
-                    </ul>
-                    <br /><br />
+            <ul class="list-disc pl-10 leading-relaxed text-justify">
+                <li class="px-10 text-justify">
+                    <span class="block">• The IEC will review a maximum of 6-7 research proposals per monthly meeting.</span>
+                </li>
+                <li class="px-10 text-justify">
+                    <span class="block">• Principal Investigators (PIs) are encouraged to strategically plan their submissions to avoid delays.</span>
+                </li>
+                <li class="px-10 text-justify">
+                    <span class="block">• When multiple submissions are received from a single PI, the IEC reserves the right to prioritize applications to ensure fair access for all researchers.</span>
+                </li>
                 
-                    
-                    
-                    <strong>2. IEC Meeting Schedule</strong>
-                    <br />                    <br />
-
-
-                    <ul class="list-disc pl-10 leading-relaxed text-justify">
-                        <li class="px-10 text-justify">
-                            <span class="block">• IEC meetings are held monthly, typically during the final week of the month.</span>
-                        </li>
-                        <li class="px-10 text-justify">
-                            <span class="block">•	PIs should submit applications well in advance to secure a slot for review.</span>
-                        </li>
+            </ul>
+            <br />
+        
             
-                    </ul>
-
-                    <br /><br />
             
-                    <strong>3. Exemption and Expedited Reviews</strong>
-                    <br />                    <br />
+            <strong>2. IEC Meeting Schedule</strong>
+            <br />                  
+
+
+            <ul class="list-disc pl-10 leading-relaxed text-justify">
+                <li class="px-10 text-justify">
+                    <span class="block">• IEC meetings are held monthly, typically during the final week of the month.</span>
+                </li>
+                <li class="px-10 text-justify">
+                    <span class="block">•	PIs should submit applications well in advance to secure a slot for review.</span>
+                </li>
+    
+            </ul>
+
+            <br />
+    
+            <strong>3. Exemption and Expedited Reviews</strong>
+            <br />                    
 
 
 
-                    • Requests for exemption or expedited review are assessed by the Member Secretaries, in consultation with the Chairperson and two designated IEC members.   
-                    
-                    <br /><br /><br/>
+            • Requests for exemption or expedited review are assessed by the Member Secretaries, in consultation with the Chairperson and two designated IEC members.   
             
-                    <strong>4. Role of the Project Scientist</strong>
-                    <br />                    <br />
+            <br /><br />
+    
+            <strong>4. Role of the Project Scientist</strong>
+            <br />                    
 
 
-                    The Project Scientist plays a key role in ensuring the smooth functioning of the IEC review process by:
-                    <br />                    <br />
+            The Project Scientist plays a key role in ensuring the smooth functioning of the IEC review process by:
+            <br />                    <br />
 
 
-                    <ul>
-                        
-                        <li>  • Compiling detailed review documentation for IEC members.</li>
-                        <li>  • Ensuring completeness of all required materials, including authorization letters, questionnaires, and supporting documents.</li>
-                        <li>  • Coordinating and organizing IEC meetings, including scheduling and logistics.</li>
-                        <li>  • Serving as the primary point of communication between the IEC and applicants.</li>
-                    </ul>
-                    <br />
-            
-                    These guidelines aim to streamline the IEC review process, maintain efficiency, and uphold fairness in research proposal evaluations.
-                </h5>
-            </div>
-            
-    </div>
-</section>
-<h5 class="m-16 -mt-12 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>Proposal Review Procedure</b></h5>
-<section class="py-24 -mt-14">
-    <div class="container">
+            <ul>
+                
+                <li>  • Compiling detailed review documentation for IEC members.</li>
+                <li>  • Ensuring completeness of all required materials, including authorization letters, questionnaires, and supporting documents.</li>
+                <li>  • Coordinating and organizing IEC meetings, including scheduling and logistics.</li>
+                <li>  • Serving as the primary point of communication between the IEC and applicants.</li>
+            </ul>
+            <br />
+    
+            These guidelines aim to streamline the IEC review process, maintain efficiency, and uphold fairness in research proposal evaluations.
+        </h5>
+    </div></div>
+
+
+
+    
+    <div id="tab4" class="content"><div class="container">
         <div class="row">
             <div class="col relative">
+                <br /><br /><br />
                 <h5 class="-mt-11 text-justify text-black from-primary via-light to-secondary">1. The proposals will be sent to members at least 3 weeks in advance.
                     <br />
                     <br />2. Decisions will be taken by consensus after discussions. Whenever consensus cannot be reached, voting will be done. It usually requires acceptance by more than 50%of people present in the meeting.
@@ -212,32 +299,97 @@ window.vDelayed = {};window.vLoadedDelayed = {};
                     <br />7. Amendment Request –Once in a semester</h5>
             </div>
         </div>
-    </div>
+    </div></div>
+</div>
+
+
 </section>
+
+<script>
+    function openTab(event, tabId) {
+        let contents = document.querySelectorAll(".content");
+        let tabs = document.querySelectorAll(".tab");
+        
+        contents.forEach(content => content.classList.remove("active-content"));
+        tabs.forEach(tab => tab.classList.remove("active"));
+        
+        document.getElementById(tabId).classList.add("active-content");
+        event.currentTarget.classList.add("active");
+    }
+</script>
+
+
+
+
+
+
+
+
 
 <footer class="py-4 bg-dark bg-gradient-to-r from-[rgb(30,58,138)] via-[rgb(59,130,246)] to-[rgb(147,197,253)] relative" id="footer">
     <div class="container">
         <div class="row">
             <div class="col text-center">
                 <a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
+
                 <div class="text-center text-white text-sm mb-6">
                     <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Addresses</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Member Secretary Office : Block II, Room - 402F</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Application Submission  : Block IV, Room - 4B9</h5>
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Contact No : 011-26591221</h5>
+                    <button class="toggle-button" onclick="toggleContent('addresses')">View Addresses</button>
+                    <div id="addresses" class="toggle-content" style="display: none; color: black;">
+                        <p><strong>Member Secretary Office:</strong> Block II, Room - 402F</p>
+                        <p><strong>Application Submission:</strong> Block IV, Room - 4B9</p>
+                        <p><strong>Contact No:</strong> 011-26591221</p>
+                    </div>
 
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Emails</h5>
-
-                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Member Secretary: <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
-                    <h5 class="mt-4 text-xl text-black" style="font-weight: 600;">Application Submission: <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
-
-
+                    <h5 class="mb-4 text-xl text-black mt-5" style="font-weight: 600;">Emails</h5>
+                    <button class="toggle-button" onclick="toggleContent('emails')">View Emails</button>
+                    <div id="emails" class="toggle-content" style="display: none; color: black;">
+                        <p><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></p>
+                        <p><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <p style="position: absolute; bottom: 2px; right: 5px; font-size: 6px; color: black;">© 2025 IIT Delhi. All rights reserved. | Made by Phani & Harshit</p>
 </footer>
+
+<!-- Simple JavaScript to toggle content visibility -->
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "none") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+<!-- You can also style the toggle button if you want -->
+<style>
+    .toggle-button {
+        background-color: #1053f0; /* Green */
+        color: rgb(0, 0, 0);
+        padding: 10px 15px;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .toggle-button:hover {
+        background-color: #1053f0;
+    }
+
+    .toggle-content {
+        margin-top: 10px;
+        padding: 10px;
+        
+        border-radius: 5px;
+    }
+</style>
+
 
 
   
