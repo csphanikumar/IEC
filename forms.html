@@ -24,13 +24,19 @@
 <script>
 window.vDelayed = {};window.vLoadedDelayed = {};
 </script>
+
+
+
+  
 <nav style="background: linear-gradient(to right, rgb(147,197,253), rgb(59,130,246), rgb(59,130,246));" 
     class="navbar filter navbar-dark static top-0 p-8 py-14 m--0 -mb-9 rounded-none" 
-    id="navbar">    <div class="container">
-        <a class="navbar-brand text-white" href="https://home.iitd.ac.in">
+    id="navbar">
+    <div class="container">
+        <a class="navbar-brand text-white" href="https://home.iitd.ac.in" style="transform: translateX(-100px);">
             <img width="180" height="180" alt="company logo" 
             src="images/e4cf24ae-8e5b-47b0-99fc-e818cbe417d7.png" 
-            class="w-[200px] h-[200px] -mt-5 rounded-none" />        </a>
+            class="w-[200px] h-[200px] -mt-5 rounded-none" />        
+        </a>
         <button class="navbar-btn" data-toggle="collapse" data-target="#navbar-row" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Open navbar menu</span>
             <span class="block h-1 rounded-full bg-white"></span>
@@ -39,32 +45,47 @@ window.vDelayed = {};window.vLoadedDelayed = {};
         </button>
         <div class="navbar-row" id="navbar-row">
             <ul class="navbar-col">
-                <li>
-                    <a href="index.html" class="nav-link mx-20 ml-20 text-xl font-semibold text-black">ABOUT</a>
+                <li class="mx-4 text-xl">
+                    <a href="" class="nav-link font-semibold text-black">ABOUT</a>
                 </li>
-                <li class="text-xl">
+            </ul>
+            
+            <ul class="navbar-col">
+                <li class="mx-4 text-xl">
                     <a href="members.html" class="nav-link font-semibold text-black">MEMBERS</a>
                 </li>
             </ul>
+
             <ul class="navbar-col">
-                <li>
-                    <a href="guidelines.html" class="nav-link -ml-36 text-xl font-semibold text-black">GUIDELINES</a>
+                <li class="mx-4">
+                    <a href="guidelines.html" class="nav-link text-xl font-semibold text-black">GUIDELINES</a>
                 </li>
-                <li>
-                    <a href="" class="nav-link ml-9 text-xl font-semibold text-black">FORMS</a>
+                
+            </ul>
+            <ul class="navbar-col">
+                <li class="mx-4">
+                    <a href="" class="nav-link text-xl font-semibold text-black">FORMS</a>
                 </li>
             </ul>
             <ul class="navbar-col">
-                <li>
-                    <a href="workshop.html" class="nav-link -ml-40 text-xl font-semibold text-black">WORKSHOP</a>
+                <li class="mx-4">
+                    <a href="workshop.html" class="nav-link text-xl font-semibold text-black">WORKSHOP</a>
                 </li>
-                <li>
+                
+            </ul>
+            <ul class="navbar-col">
+                <li class="mx-4">
                     <a href="faq.html" class="nav-link text-xl font-semibold text-black">FAQ's</a>
                 </li>
             </ul>
         </div>
     </div>
-</nav><h4 class="m-16 mt-24 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>How to Submit an Ethics Application</b></h4>
+</nav>
+  
+  
+  
+  
+  <h4 class="m-16 mt-24 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>How to Submit an Ethics Application</b></h4>
 <section class="py-24 -mt-28">
     <div class="container">
         <div class="row gap-4 justify-start">
@@ -132,19 +153,19 @@ window.vDelayed = {};window.vLoadedDelayed = {};
                 <a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
 
                 <div class="text-center text-white text-sm mb-6">
-                    <h5 class="mb-4 text-xl text-black" style="font-weight: 600;">Addresses</h5>
+                    <h5 class="mb-2 text-xl text-black" style="font-weight: 600;">Addresses</h5>
                     <button class="toggle-button" onclick="toggleContent('addresses')">View Addresses</button>
-                    <div id="addresses" class="toggle-content" style="display: none; color: black;">
-                        <p><strong>Member Secretary Office:</strong> Block II, Room - 402F</p>
-                        <p><strong>Application Submission:</strong> Block IV, Room - 4B9</p>
-                        <p><strong>Contact No:</strong> 011-26591221</p>
+                    <div id="addresses" class="toggle-content" style="display: none; color: black; margin-top: 5px;">
+                        <h5><strong>Member Secretary Office:</strong> Block II, Room - 402F</h5>
+                        <h5><strong>Application Submission:</strong> Block IV, Room - 4B9</h5>
+                        <h5><strong>Contact No:</strong> 011-26591221</h5>
                     </div>
 
-                    <h5 class="mb-4 text-xl text-black mt-5" style="font-weight: 600;">Emails</h5>
+                    <h5 class="mb-2 text-xl text-black mt-8" style="font-weight: 600;">Emails</h5>
                     <button class="toggle-button" onclick="toggleContent('emails')">View Emails</button>
-                    <div id="emails" class="toggle-content" style="display: none; color: black;">
-                        <p><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></p>
-                        <p><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></p>
+                    <div id="emails" class="toggle-content" style="display: none; color: black; margin-top: 5px;">
+                        <h5><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
+                        <h5><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
                     </div>
                 </div>
             </div>
@@ -168,23 +189,23 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <!-- You can also style the toggle button if you want -->
 <style>
     .toggle-button {
-        background-color: #1053f0; /* Green */
+        background-color: #1053f0; /* Blue */
         color: rgb(0, 0, 0);
         padding: 10px 15px;
         text-align: center;
         border: none;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 10px;
+        margin-top: 1px;
     }
 
     .toggle-button:hover {
-        background-color: #1053f0;
+        background-color: #0a3fbc; /* Darker blue */
     }
 
     .toggle-content {
         margin-top: 10px;
         padding: 10px;
-        
         border-radius: 5px;
     }
 </style>
