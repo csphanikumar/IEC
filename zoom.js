@@ -1,19 +1,17 @@
-console.log("Zoom script loaded!");
-
-// Pages where zoom should be applied
 const zoomPages = [
-  "/index.html",
-  "/members.html",
-  "/guidelines.html",
-  "/forms.html",
-  "/workshop.html",
-  "/faq.html"
+  "index.html",
+  "members.html",
+  "guidelines.html",
+  "forms.html",
+  "workshop.html",
+  "faq.html"
 ];
 
-// Apply zoom if current page matches
-if (zoomPages.includes(window.location.pathname)) {
-  console.log("Zoom applied to:", window.location.pathname);
+const currentPage = window.location.pathname.split("/").pop(); // Gets just the filename
+
+if (zoomPages.includes(currentPage)) {
+  console.log("Zoom applied to:", currentPage);
   document.body.style.zoom = "75%";
 } else {
-  console.log("No zoom needed for:", window.location.pathname);
+  console.log("No zoom needed for:", currentPage);
 }
