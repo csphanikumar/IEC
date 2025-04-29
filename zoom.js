@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (zoomPages.includes(currentPage)) {
     console.log("Zoom applied to:", currentPage);
-    document.body.style.zoom = "75%";
+    document.body.style.zoom = "80%";
   } else {
     console.log("No zoom needed for:", currentPage);
   }
