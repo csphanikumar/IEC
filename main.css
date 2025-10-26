@@ -230,45 +230,38 @@ html, body {
   width: 100%;
 }
 
-/* Cards Grid */
 .custom-cards {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: stretch; /* all items same height */
 }
 
 .custom-cards__item {
   display: flex;
   padding: 1rem;
-  width: 100%; /* default 1 per row for small screens */
+  width: 100%;
+  flex: 1 1 0; /* equal widths per row */
 }
 
 @media (min-width: 40rem) {
-  .custom-cards__item {
-    width: 50%; /* 2 per row on medium screens */
-  }
+  .custom-cards__item { width: 50%; flex: 0 0 auto; }
 }
 
 @media (min-width: 56rem) {
-  .custom-cards__item {
-    width: 25%; /* 4 per row on large screens */
-  }
+  .custom-cards__item { width: 25%; flex: 0 0 auto; }
 }
 
-
-
-/* Card */
 .custom-card {
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  width: 100%; /* fill the parent flex item */
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: all 0.3s ease;
-   border: 2px solid #1b0045;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  border: 2px solid #1b0045;
 }
 
 /* Card Image */
