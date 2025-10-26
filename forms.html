@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/x-icon" href="images\logo_red.jpg">
-  <link rel="prefetch" href="">
-  <title>IEC IIT DELHI</title><link rel="stylesheet" href="./main.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/x-icon" href="images\logo_red.jpg">
+<link rel="prefetch" href="">
+<title>IEC IIT DELHI</title><link rel="stylesheet" href="./main.css">
 <meta name="title" content="forms">
 <meta name="description" content="Review and approve research proposals involving human participants to ensure the protection of their dignity, privacy, rights, safety, and well-being.">
 
@@ -15,12 +15,12 @@
 <meta name="twitter:title" content="Untitled">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://iec-iit-delhi.versoly.page/forms">
-  <link rel="preconnect" href="https://d1pnnwteuly8z3.cloudfront.net"><link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><script>document.documentElement.classList.add('js')</script>
-  
-  <style>.d-js {display: none !important;}[data-toggle="modal"] {cursor: pointer;}</style>
+<link rel="preconnect" href="https://d1pnnwteuly8z3.cloudfront.net"><link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><script>document.documentElement.classList.add('js')</script>
+
+<style>.d-js {display: none !important;}[data-toggle="modal"] {cursor: pointer;}</style>
 </head>
 <body>
-  
+
 <script>
 window.vDelayed = {};window.vLoadedDelayed = {};
 </script>
@@ -28,207 +28,213 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <script src="zoom.js"></script>
 
 <script>
-    function toggleMenu() {
-      const popup = document.getElementById('popupMenu');
-      popup.classList.toggle('show');
-    }
-  
-    // Optional: close popup when clicking outside
-    window.addEventListener('click', function(e) {
-      const popup = document.getElementById('popupMenu');
-      const toggleBtn = document.querySelector('.menu-toggle');
-      if (popup.classList.contains('show') &&
-          !popup.contains(e.target) &&
-          !toggleBtn.contains(e.target)) {
-        popup.classList.remove('show');
-      }
-    });
-  </script>
-  
+function toggleMenu() {
+const popup = document.getElementById('popupMenu');
+popup.classList.toggle('show');
+}
+
+// Optional: close popup when clicking outside
+window.addEventListener('click', function(e) {
+const popup = document.getElementById('popupMenu');
+const toggleBtn = document.querySelector('.menu-toggle');
+if (popup.classList.contains('show') &&
+!popup.contains(e.target) &&
+!toggleBtn.contains(e.target)) {
+popup.classList.remove('show');
+}
+});
+</script>
+
 <style>
-    html {
-        font-size: 16px;
-      }
-      
-      nav {
-        background: linear-gradient(to right, rgb(147, 197, 253), rgb(59, 130, 246), rgb(59, 130, 246));
-        padding: 1rem 0;
-      }
-      
-      .navbar-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2.5rem 3rem;
-      }
-      
-      .navbar-brand img {
-        max-width: 11.25rem;
-        height: auto;
-        margin-top: -0.3rem;
-        margin-left: -5rem;
-        margin-right: 2rem;
-      }
-      
-      .navbar-links {
-        display: flex;
-        gap: 5rem;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      
-      .navbar-links li {
-        list-style: none;
-      }
-      
-      .navbar-links a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.125rem;
-        font-weight: 600;
-      }
-      
-      /* Toggle button hidden by default */
-      .menu-toggle {
-        display: none;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: black;
-      }
-      
-      /* Media query for smaller screens */
-      @media (max-width: 1200px) {
-        .menu-toggle {
-          display: block;
-          margin-left: auto;
-          margin-right: 2rem;
-        }
-      
-        .navbar-container {
-          flex-direction: row;
-          align-items: center;
-          max-width: none;
-        }
-      
-        .navbar-brand img {
-          margin-left: 0;
-          margin-top: 0;
-        }
-      
-        /* Hide links by default on small screens */
-        .navbar-links {
-          display: none;
-          flex-direction: column;
-          align-items: flex-start;
-          width: 100%;
-          padding-left: 3rem;
-        }
-      
-        /* Show links when toggled */
-        .navbar-links.show {
-          display: flex;
-        }
-      }
-      
-      .popup-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100%;
-        background-color: white;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-        padding: 2rem;
-        z-index: 1000;
-        transition: right 0.3s ease-in-out;
-      }
-      
-      .popup-menu.show {
-        right: 0;
-      }
-      
-      .popup-links {
-        list-style: none;
-        padding: 0;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-      
-      .popup-links a {
-        text-decoration: none;
-        color: black;
-        font-size: 1.125rem;
-        font-weight: 600;
-      }
-      
-      .close-btn {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-      }
-      
-      
-       
-      
- 
+html {
+font-size: 16px;
+}
+
+nav {
+background: linear-gradient(to right, rgb(147, 197, 253), rgb(59, 130, 246), rgb(59, 130, 246));
+padding: 1rem 0;
+}
+
+.navbar-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 2.5rem 3rem;
+}
+
+.navbar-brand img {
+max-width: 11.25rem;
+height: auto;
+margin-top: -0.3rem;
+margin-left: -5rem;
+margin-right: 2rem;
+}
+
+.navbar-links {
+display: flex;
+gap: 5rem;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.navbar-links li {
+list-style: none;
+}
+
+.navbar-links a {
+text-decoration: none;
+color: black;
+font-size: 1.125rem;
+font-weight: 600;
+}
+
+/* Toggle button hidden by default */
+.menu-toggle {
+display: none;
+font-size: 2rem;
+background: none;
+border: none;
+cursor: pointer;
+color: black;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1200px) {
+.menu-toggle {
+display: block;
+margin-left: auto;
+margin-right: 2rem;
+}
+
+.navbar-container {
+flex-direction: row;
+align-items: center;
+max-width: none;
+}
+
+.navbar-brand img {
+margin-left: 0;
+margin-top: 0;
+}
+
+/* Hide links by default on small screens */
+.navbar-links {
+display: none;
+flex-direction: column;
+align-items: flex-start;
+width: 100%;
+padding-left: 3rem;
+}
+
+/* Show links when toggled */
+.navbar-links.show {
+display: flex;
+}
+}
+
+.popup-menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 80%;
+max-width: 300px;
+height: 100%;
+background-color: white;
+box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+padding: 2rem;
+z-index: 1000;
+transition: right 0.3s ease-in-out;
+}
+
+.popup-menu.show {
+right: 0;
+}
+
+.popup-links {
+list-style: none;
+padding: 0;
+margin-top: 2rem;
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.popup-links a {
+text-decoration: none;
+color: black;
+font-size: 1.125rem;
+font-weight: 600;
+}
+
+.close-btn {
+background: none;
+border: none;
+font-size: 2rem;
+cursor: pointer;
+position: absolute;
+top: 1rem;
+right: 1.5rem;
+}
+
+
+
+
+
 </style>
 
 <nav>
-    <div class="navbar-container">
-      <!-- Logo -->
-      <a class="navbar-brand" href="https://home.iitd.ac.in">
-        <img src="images/e4cf24ae-8e5b-47b0-99fc-e818cbe417d7.png" alt="company logo">
-      </a>
-  
-      <!-- Hamburger Menu Button -->
-      <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
-  
-      <!-- Navbar Links (Visible for larger screens) -->
-      <ul class="navbar-links">
-        <li><a href="index.html">ABOUT</a></li>
-        <li><a href="members.html">MEMBERS</a></li>
-        <li><a href="guidelines.html">GUIDELINES</a></li>
-        <li><a href="">FORMS</a></li>
-        <li><a href="workshop.html">WORKSHOP</a></li>
-        <li><a href="faq.html">FAQ's</a></li>
-      </ul>
-  
-      <!-- Navbar Links Popup (For smaller screens) -->
-      <div class="popup-menu" id="popupMenu">
-        <button class="close-btn" onclick="toggleMenu()">×</button>
-        <ul class="popup-links">
-          <li><a href="index.html">ABOUT</a></li>
-          <li><a href="members.html">MEMBERS</a></li>
-          <li><a href="guidelines.html">GUIDELINES</a></li>
-          <li><a href="">FORMS</a></li>
-          <li><a href="workshop.html">WORKSHOP</a></li>
-          <li><a href="faq.html">FAQ's</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-  
-  
-  
-  <h4 class="m-16 mt-24 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>How to Submit an Ethics Application</b></h4>
+<div class="navbar-container">
+<!-- Logo -->
+<a class="navbar-brand" href="https://home.iitd.ac.in">
+<img src="images/e4cf24ae-8e5b-47b0-99fc-e818cbe417d7.png" alt="company logo">
+</a>
+
+<!-- Hamburger Menu Button -->
+<button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+
+<!-- Navbar Links (Visible for larger screens) -->
+<ul class="navbar-links">
+<li><a href="index.html">ABOUT</a></li>
+<li><a href="members.html">MEMBERS</a></li>
+<li><a href="guidelines.html">GUIDELINES</a></li>
+<li><a href="">FORMS</a></li>
+<li><a href="workshop.html">WORKSHOP</a></li>
+<li><a href="faq.html">FAQ's</a></li>
+</ul>
+
+<!-- Navbar Links Popup (For smaller screens) -->
+<div class="popup-menu" id="popupMenu">
+<button class="close-btn" onclick="toggleMenu()">×</button>
+<ul class="popup-links">
+<li><a href="index.html">ABOUT</a></li>
+<li><a href="members.html">MEMBERS</a></li>
+<li><a href="guidelines.html">GUIDELINES</a></li>
+<li><a href="">FORMS</a></li>
+<li><a href="workshop.html">WORKSHOP</a></li>
+<li><a href="faq.html">FAQ's</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+<h4 class="m-16 mt-24 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>How to Submit an Ethics Application</b></h4>
 <section class="py-24 -mt-28">
+  
     <ul class="custom-cards">
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://drive.google.com/file/d/1Voe9A6oCdwjoCYWjlwiryWacSDaHAdc8/preview" frameborder="0" class="custom-card__iframe"></iframe>
+        <embed
+        src="files/Annexure 1 application for expediated review.pdf"
+        type="application/pdf"
+        
+        title="Embedded PDF Viewer"
+       />
         
       </div>
       <div class="custom-card__content">
@@ -237,13 +243,13 @@ window.vDelayed = {};window.vLoadedDelayed = {};
         
         
       </div>
-    </div>
+</div>
   </li>
 
 <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/IITD%20Ethics%20application%20ICMR%20format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/IITD Ethics application ICMR format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -258,7 +264,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
  <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Guidelines_for_Drafting_Participants_Information_sheet.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Guidelines_for_Drafting_Participants_Information_sheet.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -273,7 +279,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Hospital_Ethics_Approval_Template.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Hospital_Ethics_Approval_Template.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -292,7 +298,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Non-English_Language_VETTING%20FORM.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Non-English_Language_VETTING FORM.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -307,7 +313,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/PPT%20guidelines.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/PPT guidelines.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -322,7 +328,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
  <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Assent%20Form.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Assent Form.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -337,7 +343,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/audio_visAudio%20Visual%20(AV)%20Recording%20of%20Informed%20Consent%20Process.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/audio_visAudio Visual (AV) Recording of Informed Consent Process.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -355,7 +361,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%201%20application%20for%20expediated%20review.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 1 application for expediated review.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -370,7 +376,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%202%20application%20for%20review%20exemption.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 2 application for review exemption.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -385,7 +391,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
  <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%203%20six%20monthly%20progress%20report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 3 six monthly progress report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -400,7 +406,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/APPLICATION%20FOR%20SUBMITTING%20PROTOCOL%20AMENDMENTS%20TO%20IEC.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/APPLICATION FOR SUBMITTING PROTOCOL AMENDMENTS TO IEC.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -419,7 +425,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%205%20Deviation%20in%20protocol.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 5 Deviation in protocol.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -434,7 +440,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%206%20Format%20for%20Serious%20Adverse%20Event%20Reporting%20Format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 6 Format for Serious Adverse Event Reporting Format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -449,7 +455,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
  <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%207%20Project%20closuretermination%20report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 7 Project closuretermination report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -464,7 +470,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%208_9%20Clinical%20trail%20application%20and%20SAE%20report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 8_9 Clinical trail application and SAE report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -483,7 +489,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
   <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%2010%20application%20for%20Human%20genetics%20study.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 10 application for Human genetics study.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -498,7 +504,7 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 <li class="custom-cards__item">
     <div class="custom-card">
       <div class="custom-card__image">
-        <iframe src="https://cdn.jsdelivr.net/gh/csphanikumar/IEC@f8072400098e8b05d957da8b1b980330e4f10eca/files/Annexure%2011%20Social%20and%20behavioural%20study%20application.pdf" frameborder="0" class="custom-card__iframe"></iframe>
+        <iframe src="files/Annexure 11 Social and behavioural study application.pdf" frameborder="0" class="custom-card__iframe"></iframe>
         
       </div>
       <div class="custom-card__content">
@@ -515,72 +521,80 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 
 </section>
 
+
+
+
+
+
+
+
+
 <footer class="py-4 bg-dark bg-gradient-to-r from-[rgb(30,58,138)] via-[rgb(59,130,246)] to-[rgb(147,197,253)] relative" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
+<div class="container">
+<div class="row">
+<div class="col text-center">
+<a class="h5 block mb-6 text-2xl font-semibold text-black" href="#">INSTITUTE ETHICS COMMITTEE (IEC) - IIT DELHI</a>
 
-                <div class="text-center text-white text-sm mb-6">
-                    
-                    <h5 class="mb-2 text-xl text-black" style="font-weight: 600;">Addresses</h5>
-                    <div style="color: black; margin-top: 5px;">
-                        <h5><strong>Member Secretary Office:</strong> Block II, Room - 402F</h5>
-                        <h5><strong>Application Submission:</strong> Block IV, Room - 4B9</h5>
-                        <h5><strong>Contact No:</strong> 011-26591221</h5>
-                    </div>
+<div class="text-center text-white text-sm mb-6">
 
-                    <h5 class="mb-2 text-xl text-black mt-8" style="font-weight: 600;">Emails</h5>
-                    <div style="color: black; margin-top: 5px;">
-                        <h5><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
-                        <h5><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <p style="position: absolute; bottom: 2px; right: 5px; font-size: 6px; color: black;">© 2025 IIT Delhi Ethics Office. All rights reserved.</p>
+<h5 class="mb-2 text-xl text-black" style="font-weight: 600;">Addresses</h5>
+<div style="color: black; margin-top: 5px;">
+<h5><strong>Member Secretary Office:</strong> Block II, Room - 402F</h5>
+<h5><strong>Application Submission:</strong> Block IV, Room - 4B9</h5>
+<h5><strong>Contact No:</strong> 011-26591221</h5>
+</div>
+
+<h5 class="mb-2 text-xl text-black mt-8" style="font-weight: 600;">Emails</h5>
+<div style="color: black; margin-top: 5px;">
+<h5><strong>Member Secretary:</strong> <a href="mailto:vsingh@hss.iitd.ac.in" class="text-black">vsingh@hss.iitd.ac.in</a></h5>
+<h5><strong>Application Submission:</strong> <a href="mailto:iitd_iec@iitd.ac.in" class="text-black">iitd_iec@iitd.ac.in</a></h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p style="position: absolute; bottom: 2px; right: 5px; font-size: 6px; color: black;">© 2025 IIT Delhi Ethics Office. All rights reserved.</p>
 </footer>
 
 <!-- Simple JavaScript to toggle content visibility -->
 <script>
-    function toggleContent(id) {
-        const content = document.getElementById(id);
-        if (content.style.display === "none") {
-            content.style.display = "block";
-        } else {
-            content.style.display = "none";
-        }
-    }
+function toggleContent(id) {
+const content = document.getElementById(id);
+if (content.style.display === "none") {
+content.style.display = "block";
+} else {
+content.style.display = "none";
+}
+}
 </script>
 
 <!-- You can also style the toggle button if you want -->
 <style>
-    .toggle-button {
-        background-color: #1053f0; /* Blue */
-        color: rgb(0, 0, 0);
-        padding: 10px 15px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-top: 1px;
-    }
+.toggle-button {
+background-color: #1053f0; /* Blue */
+color: rgb(0, 0, 0);
+padding: 10px 15px;
+text-align: center;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+margin-top: 1px;
+}
 
-    .toggle-button:hover {
-        background-color: #0a3fbc; /* Darker blue */
-    }
+.toggle-button:hover {
+background-color: #0a3fbc; /* Darker blue */
+}
 
-    .toggle-content {
-        margin-top: 10px;
-        padding: 10px;
-        border-radius: 5px;
-    }
+.toggle-content {
+margin-top: 10px;
+padding: 10px;
+border-radius: 5px;
+}
 </style>
 
 
-  
-  
+
+
 <script src="https://d1pnnwteuly8z3.cloudfront.net/libs/webfont/1.6.28/webfont.js"></script>
 <script>WebFont.load({google: {families: ['Inter:300,300i,400,500,600,700,800&display=swap']}})</script>
 <script>
@@ -598,11 +612,11 @@ var scriptUrl = 'https://d1pnnwteuly8z3.cloudfront.net/libs/versoly-ui/2.1.1/ver
 window.vLoadedDelayed[scriptUrl] = false;
 
 window.vDelayed[scriptUrl] = () => {
-  if (vLoadedDelayed[scriptUrl]) {
-    return
-  }
-  vLoadedDelayed[scriptUrl] = true;
-  s=document.createElement("script");
+if (vLoadedDelayed[scriptUrl]) {
+return
+}
+vLoadedDelayed[scriptUrl] = true;
+s=document.createElement("script");
 s.src="https://d1pnnwteuly8z3.cloudfront.net/libs/versoly-ui/2.1.1/versoly-ui.js";
 s.async = false;
 document.body.appendChild(s);
@@ -615,13 +629,13 @@ addEventListener('scroll', () => setTimeout(vDelayed[scriptUrl], 300), {once: tr
 </script>
 <script>
 if (document.getElementById("navbar")) {
-  var style = document.createElement('style');
-  style.innerHTML = '* {scroll-margin-top: ' + document.getElementById("navbar").offsetHeight + 'px}';
-  document.head.appendChild(style);
+var style = document.createElement('style');
+style.innerHTML = '* {scroll-margin-top: ' + document.getElementById("navbar").offsetHeight + 'px}';
+document.head.appendChild(style);
 }
 </script>
-  
-  
-  
+
+
+
 </body>
 </html>
