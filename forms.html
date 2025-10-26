@@ -45,6 +45,12 @@ popup.classList.remove('show');
 });
 </script>
 
+
+<!-- PDF.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.100/pdf.min.js"></script>
+<script src="pdf-cards.js"></script>
+
+
 <style>
 html {
 font-size: 16px;
@@ -223,75 +229,53 @@ right: 1.5rem;
 
 
 <h4 class="m-16 mt-24 text-center bg-primary rounded-3xl" style="background-color: rgb(255, 188, 36);"> <b>How to Submit an Ethics Application</b></h4>
-<section class="py-24 -mt-28">
-  
-    <ul class="custom-cards">
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <object
-  data="files/CheckList.pdf"
-  type="application/pdf"
 
-  title="Embedded PDF Viewer"
->
-  <p>
-    Your browser does not support PDFs. [Download the PDF
-    document](document.pdf)
-  </p>
-</object>
-        
+  
+   <ul class="custom-cards">
+  <li class="custom-cards__item">
+    <div class="custom-card" data-pdf="files/CheckList.pdf">
+      <div class="custom-card__image">
+        <canvas class="pdf-canvas"></canvas>
       </div>
       <div class="custom-card__content">
         <a href="files/CheckList.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
         <div class="custom-card__title">Checklist Of Documents</div>
-        
-        
       </div>
-</div>
+    </div>
   </li>
 
-<li class="custom-cards__item">
-    <div class="custom-card">
+  <li class="custom-cards__item">
+    <div class="custom-card" data-pdf="files/IITD Ethics application ICMR format.pdf">
       <div class="custom-card__image">
-        <iframe src="files/IITD Ethics application ICMR format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
+        <canvas class="pdf-canvas"></canvas>
       </div>
       <div class="custom-card__content">
         <a href="files/IITD Ethics application ICMR format.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
         <div class="custom-card__title">Application Form For Ethics Proposal</div>
-        
       </div>
     </div>
   </li>
 
- <li class="custom-cards__item">
-    <div class="custom-card">
+  <li class="custom-cards__item">
+    <div class="custom-card" data-pdf="files/Guidelines_for_Drafting_Participants_Information_sheet.pdf">
       <div class="custom-card__image">
-        <iframe src="files/Guidelines_for_Drafting_Participants_Information_sheet.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
+        <canvas class="pdf-canvas"></canvas>
       </div>
       <div class="custom-card__content">
-       <a href="files/Guidelines_for_Drafting_Participants_Information_sheet.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
+        <a href="files/Guidelines_for_Drafting_Participants_Information_sheet.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
         <div class="custom-card__title">Guidelines for Drafting Participants Information Sheet</div>
-        
       </div>
     </div>
   </li>
 
   <li class="custom-cards__item">
-    <div class="custom-card">
+    <div class="custom-card" data-pdf="files/Hospital_Ethics_Approval_Template.pdf">
       <div class="custom-card__image">
-        <iframe src="files/Hospital_Ethics_Approval_Template.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
+        <canvas class="pdf-canvas"></canvas>
       </div>
       <div class="custom-card__content">
-         <a href="files/Hospital_Ethics_Approval_Template.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
+        <a href="files/Hospital_Ethics_Approval_Template.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
         <div class="custom-card__title">Hospital Ethics Approval Template</div>
-        
       </div>
     </div>
   </li>
@@ -299,232 +283,14 @@ right: 1.5rem;
 
 
 
-<ul class="custom-cards">
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Non-English_Language_VETTING FORM.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Non-English_Language_VETTING FORM.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-        <div class="custom-card__title">Non-English Language Vetting Form</div>
-        
-        
-      </div>
-    </div>
-  </li>
-
-<li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/PPT guidelines.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/PPT guidelines.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">PPT Format For Proposal Discussion In Ethics Committee</div>
-        
-      </div>
-    </div>
-  </li>
-
- <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Assent Form.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-       <a href="files/Assent Form.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Assent Form</div>
-        
-      </div>
-    </div>
-  </li>
-
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/audio_visAudio Visual (AV) Recording of Informed Consent Process.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-         <a href="files/audio_visAudio Visual (AV) Recording of Informed Consent Process.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Audio Visual Form</div>
-        
-      </div>
-    </div>
-  </li>
-</ul>
-
-
-<ul class="custom-cards">
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 1 application for expediated review.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 1 application for expediated review.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-        <div class="custom-card__title">Annexure 1 Application For Expedited Review</div>
-        
-        
-      </div>
-    </div>
-  </li>
-
-<li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 2 application for review exemption.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 2 application for review exemption.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 2 Application For Exemption From Review</div>
-        
-      </div>
-    </div>
-  </li>
-
- <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 3 six monthly progress report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-       <a href="files/Annexure 3 six monthly progress report.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 3 Format For Six Month Project Progress Report</div>
-        
-      </div>
-    </div>
-  </li>
-
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/APPLICATION FOR SUBMITTING PROTOCOL AMENDMENTS TO IEC.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-         <a href="files/APPLICATION FOR SUBMITTING PROTOCOL AMENDMENTS TO IEC.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 4 Format For Project Protocol Amendment</div>
-        
-      </div>
-    </div>
-  </li>
-</ul>
 
 
 
-<ul class="custom-cards">
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 5 Deviation in protocol.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 5 Deviation in protocol.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-        <div class="custom-card__title">Annexure 5 Format For Protocol Violation/Deviation Reporting</div>
-        
-        
-      </div>
-    </div>
-  </li>
-
-<li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 6 Format for Serious Adverse Event Reporting Format.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 6 Format for Serious Adverse Event Reporting Format.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 6 Format For Serious Adverse Event Reporting Format</div>
-        
-      </div>
-    </div>
-  </li>
-
- <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 7 Project closuretermination report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-       <a href="files/Annexure 7 Project closuretermination report.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 7 Project Closure/Termination Report</div>
-        
-      </div>
-    </div>
-  </li>
-
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 8_9 Clinical trail application and SAE report.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-         <a href="files/Annexure 8_9 Clinical trail application and SAE report.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-
-        <div class="custom-card__title">Annexure 8 & 9 Formation For Clinical Trail Study And SAE</div>
-        
-      </div>
-    </div>
-  </li>
-</ul>
 
 
 
-<ul class="custom-cards">
-  <li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 10 application for Human genetics study.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 10 application for Human genetics study.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
-        <div class="custom-card__title">Annexure 10 Application For Human Genetics Study</div>
-        
-        
-      </div>
-    </div>
-  </li>
 
-<li class="custom-cards__item">
-    <div class="custom-card">
-      <div class="custom-card__image">
-        <iframe src="files/Annexure 11 Social and behavioural study application.pdf" frameborder="0" class="custom-card__iframe"></iframe>
-        
-      </div>
-      <div class="custom-card__content">
-        <a href="files/Annexure 11 Social and behavioural study application.pdf"><button class="custom-btn custom-btn--block custom-card__btn">Download</button></a>
 
-        <div class="custom-card__title">Annexure 11 Application For Social And Behavioral Study</div>
-        
-      </div>
-    </div>
-  </li>
-
- 
-</ul>
-
-</section>
 
 
 
