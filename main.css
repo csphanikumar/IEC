@@ -181,3 +181,147 @@ html, body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+:root {
+  --custom-gray-darker: #444444;
+  --custom-gray-dark: #000000;
+  --custom-gray: #999999;
+  --custom-gray-light: #cccccc;
+  --custom-gray-lighter: #ececec;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Buttons */
+.custom-btn {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--custom-gray-light);
+  color: var(--custom-gray-dark);
+  padding: 0.5rem;
+  
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.custom-btn:hover {
+  background-color:#1D4ED8;
+  color: rgb(255, 255, 255);
+}
+
+
+.custom-btn--block {
+  display: block;
+  width: 100%;
+}
+
+/* Cards Grid */
+.custom-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-cards__item {
+  display: flex;
+  padding: 1rem;
+  width: 100%; /* default 1 per row for small screens */
+}
+
+@media (min-width: 40rem) {
+  .custom-cards__item {
+    width: 50%; /* 2 per row on medium screens */
+  }
+}
+
+@media (min-width: 56rem) {
+  .custom-cards__item {
+    width: 25%; /* 4 per row on large screens */
+  }
+}
+
+/* Card */
+.custom-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+   border: 2px solid #1b0045;
+}
+
+/* Card Image */
+.custom-card__image {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 220px; /* same fixed height as before */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-card__iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  /* This ensures iframe fills container without stretching content */
+}
+
+
+.custom-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ensures full image visible, no cropping */
+  display: block;
+  filter: contrast(100%);
+  transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+}
+
+
+/* Card Content */
+.custom-card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Card Text */
+.custom-card__title {
+  color: var(--custom-gray-dark);
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  
+ 
+}
+
+
+
+
+
+
