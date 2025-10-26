@@ -257,23 +257,7 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
-  .custom-card__iframe {
-    display: none;
-  }
 
-  .custom-card__content::before {
-    content: "📄 PDF preview not available on mobile. Please use the Download button below.";
-    display: block;
-    background: #f9f9f9;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #333;
-  }
-}
 
 /* Card */
 .custom-card {
@@ -337,6 +321,7 @@ html, body {
   
  
 }
+
 
 
 
