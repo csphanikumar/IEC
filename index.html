@@ -274,39 +274,42 @@ window.vDelayed = {};window.vLoadedDelayed = {};
 
 
 
+
+  
+<!-----------------------------------------------------------------------------------------------------------CHANGES FOR HOMEPAGE ANNOUNCEMENT ------------------------------------------------------------->
     
 
-    <script>
-        fetch('announcementhome.json')
-        .then(response => response.json())
-        .then(data => {
-          const announcementElement = document.getElementById('announcement');
-          announcementElement.innerHTML = '';
-      
-          data.announcement.forEach(line => {
+<script>
+    fetch('announcementhome.json')
+    .then(response => response.json())
+    .then(data => {
+        const announcementElement = document.getElementById('announcement');
+        announcementElement.innerHTML = '';
+
+        data.announcement.forEach((line, index) => {
             const p = document.createElement('p');
-      
-            if (line.startsWith("Upcoming IEC meeting Date") || line.startsWith("Venue")) {
-                p.style.color = "rgb(56, 189, 248)"; 
+
+            // Line-wise styling
+            if (index === 3) {  
+                p.style.color = "white"; 
                 p.style.fontWeight = "600";
-              }
-      
+            }
+
+          
+
             p.textContent = line;
             announcementElement.appendChild(p);
-          });
-        })
-        .catch(error => {
-          console.error('Error fetching the announcement:', error);
-          document.getElementById('announcement').innerHTML =
-            '<b class="!text-red-400">There was an error loading the announcement.</b>';
         });
-      
-    
-    </script>
+    })
+    .catch(error => {
+        console.error('Error fetching the announcement:', error);
+        document.getElementById('announcement').innerHTML =
+            '<b class="!text-red-400">There was an error loading the announcement.</b>';
+    });
+</script>
 
 
-
-
+<!-----------------------------------------------------------------------------------------------------------CHANGES FOR HOMEPAGE ANNOUNCEMENT ------------------------------------------------------------->
 
 
 
